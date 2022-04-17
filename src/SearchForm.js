@@ -28,23 +28,32 @@ function SearchForm({ updateFilterBy }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input-group">
-        <div className="col-md-6">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Enter search term.."
-            aria-label="search term"
-            aria-describedby="basic-addon2"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="input-group-append">
-          <button className="btn btn-primary btn-outline-secondary text-white" type="submit">Submit</button>
-        </div>
-      </div >
-    </form >
+    <div className="SearchForm mb-4">
+      <form onSubmit={handleSubmit}>
+        <div className="input-group">
+          <div className="col-md-6">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter search term.."
+              aria-label="search term"
+              aria-describedby="basic-addon2"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-group-append">
+            <button className="
+          btn btn-primary 
+          btn-outline-secondary 
+          text-white 
+          ms-4"
+              type="submit">
+              Submit
+            </button>
+          </div>
+        </div >
+      </form >
+    </div>
   );
 }
 

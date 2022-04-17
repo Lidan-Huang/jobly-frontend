@@ -4,7 +4,9 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 /** Presentational of showing home page
- * 
+ * useContext: 
+ * - user object {username, firstName, lastName, email}
+ * - token object {token}
  * props: none
  * state: none
  * 
@@ -14,24 +16,27 @@ import { Link } from "react-router-dom";
 function HomePage() {
   const { user, token } = useContext(UserContext);
   return (
-    <>
-      {
-        token
-          ?
-          < div className="Homepage " >
-            <h1 className="display-1 fw-bold">Jobly</h1>
-            <p className="h3">All the jobs in one, convenient place.</p>
-            <h2> Welcome back, {user.firstName}</h2>
-          </div >
-          :
-          <div className="Homepage ">
-            <h1 className="display-1 fw-bold">Jobly</h1>
-            <p className="h3">All the jobs in one, convenient place.</p>
-            <Link to="/login">Log in</Link>
-            <Link to="/signup">Sign up</Link>
-          </div>
-      }
-    </>
+    <div className="Homepage">
+      <div className="container text-center">
+        <h1 className="mb-4 fw-bold text-dark display-2">Jobly</h1>
+        <p className="text-light display-6">All the jobs in one, convenient place.</p>
+        {
+          token
+            ?
+            <h2> Welcome back, {user.firstName}!</h2>
+            : (
+              <p>
+                <Link className="btn btn-primary fw-bold me-3"
+                  to="/login">
+                  Log in
+                </Link>
+                <Link className="btn btn-primary fw-bold" to="/signup">
+                  Sign up
+                </Link>
+              </p>
+            )}
+      </div>
+    </div>
   );
 }
 
