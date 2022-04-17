@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import UserContext from "./userContext";
 
 /** Show the profile form and update the user state 
- *  //TODO: useCOntext docstring
+ * useContext: user object {username, firstName, lastName, email}
  * props:
  *  - editUser: a function passed down from App component
  * 
@@ -13,7 +13,7 @@ import UserContext from "./userContext";
  */
 
 function ProfileForm({ editUser }) {
-  const user = useContext(UserContext);
+  const {user} = useContext(UserContext);
   const [profileEdited, setProfileEdited] = useState(false);
 
   const [formData, setFormData] = useState(
@@ -39,7 +39,7 @@ function ProfileForm({ editUser }) {
     editUser(formData);
     setProfileEdited(true);
   }
-  //TODO: consider checking if form data actually changed
+
   return (
     <>
       <form onSubmit={handleSubmit}>

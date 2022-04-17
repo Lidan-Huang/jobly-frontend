@@ -11,8 +11,7 @@ import { useContext } from "react";
 
 /** Routes for rendering components
  * useContext: 
- * - user: {}
- * - token: {}
+ * - user object {username, firstName, lastName, email}
  * Props: 
  * - login: function called from App parent
  * - signup: function called from App parent
@@ -24,13 +23,11 @@ import { useContext } from "react";
  */
 
 function Routes({ login, signup, editUser }) {
-  const {token} = useContext(UserContext);
-
-  console.log("token from routes", token);
+  const {user} = useContext(UserContext);
 
   return (
     <>
-      {!token
+      {!user
         ?
         <Switch>
           <Route exact path="/">
