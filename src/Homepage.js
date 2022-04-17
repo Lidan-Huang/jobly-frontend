@@ -18,12 +18,12 @@ function HomePage() {
   return (
     <div className="Homepage">
       <div className="container text-center">
-        <h1 className="mb-4 fw-bold text-dark display-2">Jobly</h1>
-        <p className="text-light display-6">All the jobs in one, convenient place.</p>
+        <h1 className="mb-4 fw-bold text-dark display-3">Jobly</h1>
+        <p className="Homepage-text display-6">All the jobs in one, convenient place.</p>
         {
           token
             ?
-            <h2> Welcome back, {user.firstName}!</h2>
+            <h2 className="Homepage-text"> Welcome back, {user.firstName}!</h2>
             : (
               <p>
                 <Link className="btn btn-primary fw-bold me-3"

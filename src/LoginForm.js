@@ -36,34 +36,51 @@ function LoginForm({ login }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="username">
-        Username
-      </label>
-      <input
-        id="username"
-        name="username"
-        value={formData.username}
-        required
-        onChange={handleChange}
-      />
+    <div className="LoginForm">
+      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <h3 className="mb-3 text-primary">Log In</h3>
+        <div class="card">
+          <div class="card-body">
+            <form onSubmit={handleSubmit}>
+              <div class="mb-3">
+                <label className="form-label me-2" htmlFor="username">
+                  Username
+                </label>
+                <input
+                  id="username"
+                  name="username"
+                  value={formData.username}
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-      <label htmlFor="password">
-        Password
-      </label>
-      <input
-        id="password"
-        name="password"
-        value={formData.password}
-        required
-        onChange={handleChange}
-        type="password"
-      />
-      {formErrors.length
-        ? <p className="text-danger">{formErrors[0]}</p>
-        : null}
-      <button>Submit</button>
-    </form>
+              <div class="mb-3">
+                <label className="form-label me-2" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  className="ms-1"
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  required
+                  onChange={handleChange}
+                  type="password"
+                />
+              </div>
+
+
+              {formErrors.length
+                ? <p className="text-danger">{formErrors[0]}</p>
+                : null}
+              <button className="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   );
 }
 

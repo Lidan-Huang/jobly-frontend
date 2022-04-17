@@ -26,23 +26,23 @@ function Nav({ logout }) {
         ?
         <nav className="Nav">
           <div className="Nav-left">
-            <NavLink exact to="/">Jobly</NavLink>
+            <NavLink exact to="/" className="Nav-jobly">Jobly</NavLink>
           </div>
           <div className="Nav-right">
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/signup">Signup</NavLink>
+            <NavLink to="/login" className="Nav-login text-primary">Login</NavLink>
+            <NavLink to="/signup" className="Nav-signup text-primary">Signup</NavLink>
           </div>
         </nav>
         :
-        <nav className="Nav">
+        <nav className="Nav navbar">
           <div className="Nav-left">
-            <NavLink exact to="/">Jobly</NavLink>
+            <NavLink exact to="/" className="Nav-jobly">Jobly</NavLink>
           </div>
           <div className="Nav-right">
-            <NavLink to="/companies">Companies</NavLink>
-            <NavLink to="/jobs">Jobs</NavLink>
-            <NavLink to="/profile">Profile</NavLink>
-            <button className="btn btn-primary" onClick={logout}>Logout {user.username}</button>
+            <NavLink to="/companies" className="fs-5 text-primary me-5">Companies</NavLink>
+            <NavLink to="/jobs" className="fs-5 text-primary me-5">Jobs</NavLink>
+            <NavLink to="/profile" className="fs-5 text-primary me-5">Profile</NavLink>
+            <button className="btn btn-primary fs-5text-primary" onClick={logout}>Logout {user.username}</button>
           </div>
         </nav>
       }

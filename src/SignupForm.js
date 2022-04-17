@@ -38,65 +38,90 @@ function SignupForm({ signup }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="username">
-        Username
-      </label>
-      <input
-        id="username"
-        name="username"
-        value={formData.username}
-        required
-        onChange={handleChange}
-      />
+    <div class="SignupForm">
+      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <h3 className="mb-3 text-primary">Sign Up</h3>
+        <div class="card">
+          <div class="card-body">
+            <form onSubmit={handleSubmit}>
+              <div class="mb-3">
+                <label className="form-label" htmlFor="username">
+                  Username
+                </label>
+                <input
+                  className="ms-1"
+                  id="username"
+                  name="username"
+                  value={formData.username}
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-      <label htmlFor="password">
-        Password
-      </label>
-      <input
-        id="password"
-        name="password"
-        value={formData.password}
-        required
-        onChange={handleChange}
-        type="password"
-      />
+              <div class="mb-3">
+                <label className="form-label" htmlFor="password">
+                  Password
+                </label>
+                <input
+                  className="ms-2"
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  required
+                  onChange={handleChange}
+                  type="password"
+                />
+              </div>
 
-      <label htmlFor="firstName">
-        First name
-      </label>
-      <input
-        id="firstName"
-        name="firstName"
-        value={formData.firstName}
-        required
-        onChange={handleChange}
-      />
+              <div class="mb-3">
+                <label className="form-label" htmlFor="firstName">
+                  First name
+                </label>
+                <input
+                  className="ms-1"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-      <label htmlFor="lastName">
-        Last name
-      </label>
-      <input
-        id="lastName"
-        name="lastName"
-        value={formData.lastName}
-        required
-        onChange={handleChange}
-      />
+              <div class="mb-3">
+                <label className="form-label" htmlFor="lastName">
+                  Last name
+                </label>
+                <input
+                  className="ms-1"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  required
+                  onChange={handleChange}
+                />
+              </div>
 
-      <label htmlFor="email">
-        Email
-      </label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        value={formData.email}
-        required
-        onChange={handleChange}
-      />
-      <button>Submit</button>
-    </form>
+              <div class="mb-3">
+                <label className="form-label ms-2 me-2" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  className="ms-4"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  required
+                  onChange={handleChange}
+                />
+              </div>
+
+              <button className="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

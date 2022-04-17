@@ -12,6 +12,17 @@
   display: flex;
   padding-right: 50px;
   gap: 30px;
+  margin-right: 12%;
+}
+.Nav-jobly {
+  font-size: 25px;
+}
+
+.Nav-signup {
+  margin-right: 10px;
+}
+.Nav-login {
+  margin-right: 40px;
 }
 
 a:link {
