@@ -10,9 +10,11 @@ import UserContext from "./userContext";
 import { useContext } from "react";
 
 /** Routes for rendering components
- * //TODO: useContext
+ * useContext: 
+ * - user: {}
+ * - token: {}
  * Props: 
- * -login: function called from App parent
+ * - login: function called from App parent
  * - signup: function called from App parent
  * - editUser: function called from App parent
  * 

@@ -10,12 +10,12 @@ import UserContext from "./userContext";
  * 
  * Context: 
  * - user: {}
- * 
+ * - token: {}
  * State: none
  * 
  * App -> Nav 
  */
-//TODO: docstring for whenever you're using useContext
+
 function Nav({ logout }) {
   const {user, token} = useContext(UserContext);
   console.log("user from nav", user);

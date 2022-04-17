@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import SearchForm from "./SearchForm";
 import JoblyApi from "./JoblyApi";
 import JobCardList from "./JobCardList";
-import "./JoblyApp.css"
 
 
 function JobList() {
@@ -32,10 +31,9 @@ function JobList() {
 
 
   return (
-    <main className="JoblyApp">
+    <main className="JobList">
       <SearchForm updateFilterBy={updateFilterBy} />
       <JobCardList jobList={jobList} isCompanyJob={false} />
-
     </main>
   );
 }
