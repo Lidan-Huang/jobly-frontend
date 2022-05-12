@@ -16,9 +16,13 @@ Installs project dependencies
 Runs the app in the development mode
 Opens [http://localhost:3000](http://localhost:3000) to view in the browser
 
+`npm test`
+Launches the tests for components
+*Tests currently WIP
+
 ---
 ## Technology Notes
   - Built with React via [create-react-app](https://create-react-app.dev/)
   - Styled with [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
   - [Axios](https://www.npmjs.com/package/axios) is used to make API requests.
-  - 
+  - [jwt-decode](https://www.npmjs.com/package/jwt-decode) is used to decode user's username from the token once the user is authenticated.
