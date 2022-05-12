@@ -7,6 +7,7 @@ Jobly is a responsive single page React web application for job searching.
   - Users can update their profile.
 
 ## Check out my [live demo](http://jobly.demo.lidanhuang.com/)!
+![alt jobly demo](https://github.com/Lidan-Huang/react-jobly/commit/f64981cad056f9b7b4e99c03a1d9bd07e8a88677)
 ---
 ## Installation and Setup
 `npm install`
